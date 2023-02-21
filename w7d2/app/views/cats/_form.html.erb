@@ -8,6 +8,8 @@
     name="authenticity_token"
     value="<%= form_authenticity_token %>"
   >
+  
+  
 
   <label for="cat_name">Name</label>
   <input
@@ -64,6 +66,15 @@
   </label>
 
   <br>
+
+  
+  <% content_for :footer do %>
+    <p>This is the about page.</p>
+  <% end %>
+  
+
   <% submit_text = (cat.persisted? ? 'Update' : 'Create') + ' cat!' %>
   <input type="submit" value="<%= submit_text %>">
+
+  
 </form>
